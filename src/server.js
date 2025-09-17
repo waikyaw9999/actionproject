@@ -6,7 +6,7 @@ app.use(express.json());
 
 // Base route
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to our GitHub Actions demo API. Hooray!!!' });
+  res.json({ message: 'Welcome to our GitHub Actions demo API.' });
 });
 
 // Todo routes

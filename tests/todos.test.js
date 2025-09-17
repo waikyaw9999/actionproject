@@ -10,7 +10,7 @@ describe('Todo API', () => {
         .get('/')
         .expect(200);
 
-      expect(res.body).toHaveProperty('message', 'Welcome to our GitHub Actions demo API. Hooray!!!');
+      expect(res.body).toHaveProperty('message', 'Welcome to our GitHub Actions demo API.');
     });
   });
 
