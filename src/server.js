@@ -1,13 +1,18 @@
+require('dotenv').config();
 const express = require('express');
 const todoRoutes = require('./routes/todos');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 app.use(express.json());
 
 // Base route
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to our GitHub Actions demo API.' });
+  res.json({ message: 'Welcome to our GitHub Actions demo API' });
 });
+
+// Auth routes
+app.use('/api/auth', authRoutes);
 
 // Todo routes
 app.use('/api/todos', todoRoutes);
